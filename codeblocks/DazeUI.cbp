@@ -194,6 +194,15 @@
 		<Unit filename="../sources/daze/daze.h" />
 		<Unit filename="../sources/daze/graphics/defines.h" />
 		<Unit filename="../sources/daze/graphics/texture.h" />
+		<Unit filename="../sources/daze/ui/window.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../sources/daze/view/ui_element.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../sources/test/main.cpp">
+			<Option target="Debug" />
+		</Unit>
 		<Extensions>
 			<code_completion />
 			<debugger />

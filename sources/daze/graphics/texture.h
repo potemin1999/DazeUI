@@ -31,15 +31,10 @@ public:
         format = _format;
         glGenTextures(1,&pointer);
         bindTexture();
-        #ifdef DEBUG_TEXTURE_OUTPUT
-        std::cout << "texture created" << std::endl;
-        #endif
     }
 
     ~Texture(){
-        #ifdef DEBUG_TEXTURE_OUTPUT
-        std::cout << "texture created" << std::endl;
-        #endif
+
     }
 
     void setData(void* _data,int _data_type){
