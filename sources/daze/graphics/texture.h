@@ -1,7 +1,7 @@
 #ifndef TEXTURE_H_INCLUDED
 #define TEXTURE_H_INCLUDED
 
-#include "graphics\defines.h"
+#include "defines.h"
 
 #ifdef DEBUG_TEXTURE
 #define DEBUG_TEXTURE_OUTPUT
@@ -11,21 +11,25 @@
 namespace daze{
 
 class Texture{
+
+private:
+    static Texture* current;
+    bool loaded = false;
+    GLuint pointer = -1;
+    int format = -1;
+    int width = -1;
+    int height = -1;
+    int min_filter = GL_NEAREST;
+    int mag_filter = GL_NEAREST;
+
+    inline int bindTexture(){
+        if (current==this) return 1;
+        glBindTexture(GL_TEXTURE_2D, pointer);
+        current = this;
+        return 0;
+    }
+
 public:
-
-    Texture(int _width,int _height,int _format,void* _data,int _data_type){
-        Texture(_width,_height,GL_RGBA);
-        setData(_data,_data_type);
-    }
-
-    Texture(int _width,int _height,int _format){
-        Texture(_format);
-        setSize(_width,_height);
-    }
-
-    Texture(int _width,int height){
-        Texture(_width,_height,GL_RGBA);
-    }
 
     Texture(int _format){
         format = _format;
@@ -33,8 +37,23 @@ public:
         bindTexture();
     }
 
-    ~Texture(){
+    Texture(int _width,int _height,int _format){
+        Texture(_format);
+        setSize(_width,_height);
+    }
 
+    Texture(int _width,int _height){
+        Texture(_width,_height,GL_RGBA);
+    }
+
+    Texture(int _width,int _height,int _format,void* _data,int _data_type){
+        Texture(_width,_height,GL_RGBA);
+        setData(_data,_data_type);
+    }
+
+
+
+    ~Texture(){
     }
 
     void setData(void* _data,int _data_type){
@@ -60,22 +79,7 @@ public:
         bindTexture();
     }
 
-private:
-    static int current = -1;
-    bool loaded = false;
-    int pointer = -1;
-    int format = -1;
-    int width = -1;
-    int height = -1;
-    int min_filter = GL_NEAREST;
-    int mag_filter = GL_NEAREST;
 
-    inline int bindTexture(){
-        if (current==pointer) return 1;
-        glBindTexture(GL_TEXTURE_2D, pointer);
-        current = pointer;
-        return 0;
-    }
 };
 
 }

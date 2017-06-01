@@ -1,4 +1,5 @@
 
+#include "daze/daze.h"
 
 int main(void){
 
@@ -7,5 +8,5 @@ int main(void){
 
 }
 
-class TestWindow : Window{
+class TestWindow{
 };

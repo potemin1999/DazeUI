@@ -9,10 +9,15 @@
 #if ( defined(_WIN32) | defined(__WIN32) | defined(__linux__) )
 
 #include "glad/glad.h"
-#include "khr/khrplatform"
+#include "khr/khrplatform.h"
 
 #elif ( defined(_ANDROID_) )
 
 #endif
+
+namespace daze{
+class Texture;
+class Framebuffer;
+}
 
 #endif // GRAPHICS_DEFINES_H_INCLUDED
