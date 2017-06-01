@@ -1,7 +1,7 @@
 #ifndef WINDOW_H_INCLUDED
 #define WINDOW_H_INCLUDED
 
-#include"defines.h"
+#include "defines.h"
 
 namespace daze{
 
@@ -19,9 +19,11 @@ public:
 
 
 private:
+
     int run(){
 
     }
+
 };
 
 

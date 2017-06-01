@@ -29,7 +29,7 @@ private:
         return 0;
     }
 
-    inline int gen(unsigned int* pointer){
+    inline void gen(unsigned int* pointer){
         glGenTextures(1,pointer);
     }
 
@@ -91,6 +91,13 @@ public:
         bindTexture();
     }
 
+    unsigned getPointer(){
+        return pointer;
+    }
+
+    bool isLoaded(){
+        return loaded;
+    }
 
 };
 

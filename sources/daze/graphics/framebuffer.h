@@ -1,7 +1,7 @@
 #ifndef FRAMEBUFFER_H_INCLUDED
 #define FRAMEBUFFER_H_INCLUDED
 
-#include
+#include "defines.h"
 
 namespace daze{
 
@@ -21,14 +21,20 @@ public:
         return bindFramebuffer();
     }
 
-    int attach(Texture* t){
+    int attach(int attachment,Texture* t){
+        glFramebufferTexture2D(GL_FRAMEBUFFER, attachment, GL_TEXTURE_2D, t->getPointer(), 0);
+        return 0;
+    }
 
+    int attach(Texture* t){
+        glFramebufferTexture2D(GL_FRAMEBUFFER,GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D,t->getPointer(), 0);
+        return 0;
     }
 
 private:
 
-    static int Framebuffer* current = 0;
-    int pointer;
+    static Framebuffer* current;
+    unsigned int pointer;
 
     inline int bindFramebuffer(){
         if (current==this) return 1;

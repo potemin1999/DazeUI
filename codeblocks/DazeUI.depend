@@ -1108,5 +1108,22 @@
 	<glm/gtc/quaternion.hpp>
 	<glm/gtx/dual_quaternion.hpp>
 
-1496225313 source:c:\projects\dazeui\sources\test\main.cpp
+1496299580 source:c:\projects\dazeui\sources\test\main.cpp
+	"daze/daze.h"
+
+1496299614 c:\projects\dazeui\sources\daze\daze.h
+	"graphics/defines.h"
+	"graphics/texture.h"
+	"graphics/framebuffer.h"
+
+1496225514 c:\projects\dazeui\sources\daze\graphics\defines.h
+	"glad/glad.h"
+	"khr/khrplatform.h"
+
+1496299638 c:\projects\dazeui\sources\daze\graphics\texture.h
+	"defines.h"
+	<iostream>
+
+1496299706 c:\projects\dazeui\sources\daze\graphics\framebuffer.h
+	"defines.h"
 

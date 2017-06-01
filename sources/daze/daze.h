@@ -6,6 +6,7 @@
 
 #include "graphics/defines.h"
 #include "graphics/texture.h"
+#include "graphics/framebuffer.h"
 
 
 #ifdef DEBUG
