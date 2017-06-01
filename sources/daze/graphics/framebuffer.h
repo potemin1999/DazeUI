@@ -7,29 +7,6 @@ namespace daze{
 
 
 class Framebuffer{
-public:
-
-    Framebuffer(){
-        glGenFramebuffers(1,&pointer);
-        bindFramebuffer();
-    }
-
-    ~Framebuffer(){
-    }
-
-    int use(){
-        return bindFramebuffer();
-    }
-
-    int attach(int attachment,Texture* t){
-        glFramebufferTexture2D(GL_FRAMEBUFFER, attachment, GL_TEXTURE_2D, t->getPointer(), 0);
-        return 0;
-    }
-
-    int attach(Texture* t){
-        glFramebufferTexture2D(GL_FRAMEBUFFER,GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D,t->getPointer(), 0);
-        return 0;
-    }
 
 private:
 
@@ -42,6 +19,34 @@ private:
         current = this;
         return 0;
     }
+
+public:
+
+    Framebuffer(){
+        glGenFramebuffers(1,&pointer);
+        bindFramebuffer();
+    }
+
+    ~Framebuffer(){
+
+    }
+
+    inline int use(){
+        return bindFramebuffer();
+    }
+
+    int attach(int attachment,Texture* t){
+        glFramebufferTexture2D(GL_FRAMEBUFFER, attachment, GL_TEXTURE_2D, t->getPointer(), 0);
+        t->onAttach(this);
+        return 0;
+    }
+
+    int attach(Texture* t){
+        glFramebufferTexture2D(GL_FRAMEBUFFER,GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D,t->getPointer(), 0);
+        t->onAttach(this);
+        return 0;
+    }
+
 };
 
 

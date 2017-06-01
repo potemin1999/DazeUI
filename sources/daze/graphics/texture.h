@@ -14,6 +14,8 @@ class Texture{
 
 private:
     static Texture* current;
+
+    Framebuffer* attached;
     bool loaded = false;
     GLuint pointer = -1;
     int format = -1;
@@ -97,6 +99,10 @@ public:
 
     bool isLoaded(){
         return loaded;
+    }
+
+    void onAttach(Framebuffer* f){
+        attached = f;
     }
 
 };

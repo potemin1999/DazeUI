@@ -1111,19 +1111,23 @@
 1496299580 source:c:\projects\dazeui\sources\test\main.cpp
 	"daze/daze.h"
 
-1496299614 c:\projects\dazeui\sources\daze\daze.h
+1496301776 c:\projects\dazeui\sources\daze\daze.h
 	"graphics/defines.h"
 	"graphics/texture.h"
 	"graphics/framebuffer.h"
+	"graphics/shader.h"
 
-1496225514 c:\projects\dazeui\sources\daze\graphics\defines.h
+1496300104 c:\projects\dazeui\sources\daze\graphics\defines.h
 	"glad/glad.h"
 	"khr/khrplatform.h"
 
-1496299638 c:\projects\dazeui\sources\daze\graphics\texture.h
+1496300104 c:\projects\dazeui\sources\daze\graphics\texture.h
 	"defines.h"
 	<iostream>
 
-1496299706 c:\projects\dazeui\sources\daze\graphics\framebuffer.h
+1496300103 c:\projects\dazeui\sources\daze\graphics\framebuffer.h
+	"defines.h"
+
+1496301908 c:\projects\dazeui\sources\daze\graphics\shader.h
 	"defines.h"
 

@@ -18,6 +18,7 @@
 namespace daze{
 class Texture;
 class Framebuffer;
+class Shader;
 }
 
 #endif // GRAPHICS_DEFINES_H_INCLUDED

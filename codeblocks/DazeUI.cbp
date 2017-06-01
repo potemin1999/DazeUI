@@ -48,7 +48,6 @@
 		<Unit filename="../include/glm/detail/_swizzle.hpp" />
 		<Unit filename="../include/glm/detail/_swizzle_func.hpp" />
 		<Unit filename="../include/glm/detail/_vectorize.hpp" />
-		<Unit filename="../include/glm/detail/dummy.cpp" />
 		<Unit filename="../include/glm/detail/func_common.hpp" />
 		<Unit filename="../include/glm/detail/func_exponential.hpp" />
 		<Unit filename="../include/glm/detail/func_geometric.hpp" />
@@ -193,6 +192,12 @@
 		<Unit filename="../include/khr/khrplatform.h" />
 		<Unit filename="../sources/daze/daze.h" />
 		<Unit filename="../sources/daze/graphics/defines.h" />
+		<Unit filename="../sources/daze/graphics/framebuffer.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../sources/daze/graphics/shader.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="../sources/daze/graphics/texture.h" />
 		<Unit filename="../sources/daze/ui/window.h">
 			<Option target="&lt;{~None~}&gt;" />
