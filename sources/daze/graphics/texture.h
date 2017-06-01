@@ -29,25 +29,37 @@ private:
         return 0;
     }
 
+    inline int gen(unsigned int* pointer){
+        glGenTextures(1,pointer);
+    }
+
 public:
 
     Texture(int _format){
         format = _format;
-        glGenTextures(1,&pointer);
+        gen(&pointer);
         bindTexture();
     }
 
     Texture(int _width,int _height,int _format){
-        Texture(_format);
+        format = _format;
+        gen(&pointer);
+        bindTexture();
         setSize(_width,_height);
     }
 
     Texture(int _width,int _height){
-        Texture(_width,_height,GL_RGBA);
+        format = GL_RGBA;
+        gen(&pointer);
+        bindTexture();
+        setSize(_width,_height);
     }
 
     Texture(int _width,int _height,int _format,void* _data,int _data_type){
-        Texture(_width,_height,GL_RGBA);
+        format = _format;
+        gen(&pointer);
+        bindTexture();
+        setSize(_width,_height);
         setData(_data,_data_type);
     }
 
