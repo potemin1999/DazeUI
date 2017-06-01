@@ -18,7 +18,7 @@ int main(int c,char** args){
     w->setFullscreen(false);
     w->setName("TestWindow");
     w->setPosition(20,20);
-    w->setSize(720,1280);
+    w->setSize(1280,720);
     w->run(0);
 }
 

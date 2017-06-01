@@ -4,6 +4,7 @@
 #include <thread>
 #include "string.h"
 #include "stdlib.h"
+#include "../view/view.h"
 
 namespace daze{
 
@@ -15,6 +16,7 @@ private:
     int* size = new int[2];
     int* position = new int[2];
     char* name;
+    View* rootView;
     std::thread* main;
 
     virtual int internal_run(void* parameters);
@@ -66,6 +68,8 @@ public:
     }
 
     char* getName(){return name;}
+
+    View* getRootView(){return rootView;}
 };
 
 

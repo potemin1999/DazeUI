@@ -29,6 +29,7 @@ private:
                 glDeleteShader(*handle);
             }
         }
+        return 0;
     }
 
     int create_program(unsigned int* program, unsigned int* vertex, unsigned int* fragment){
@@ -47,6 +48,7 @@ private:
             }
             glReleaseShaderCompiler();
         }
+        return 0;
     }
 
 public:
@@ -68,6 +70,7 @@ public:
         create_shader(&vertex,(const char*)vertex_source,GL_VERTEX_SHADER);
         create_shader(&fragment,(const char*)fragment_source,GL_FRAGMENT_SHADER);
         create_program(&program,&vertex,&fragment);
+        return 0;
     }
 
     int use(){
@@ -80,6 +83,7 @@ public:
     int free_cache(){
         if (fragment_source) delete fragment_source;
         if (vertex_source) delete vertex_source;
+        return 0;
     }
 
 
