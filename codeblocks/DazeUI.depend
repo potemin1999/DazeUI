@@ -1108,14 +1108,15 @@
 	<glm/gtc/quaternion.hpp>
 	<glm/gtx/dual_quaternion.hpp>
 
-1496299580 source:c:\projects\dazeui\sources\test\main.cpp
+1496344713 source:c:\projects\dazeui\sources\test\main.cpp
 	"daze/daze.h"
 
-1496301776 c:\projects\dazeui\sources\daze\daze.h
+1496307214 c:\projects\dazeui\sources\daze\daze.h
 	"graphics/defines.h"
 	"graphics/texture.h"
 	"graphics/framebuffer.h"
 	"graphics/shader.h"
+	"ui/window.h"
 
 1496300104 c:\projects\dazeui\sources\daze\graphics\defines.h
 	"glad/glad.h"
@@ -1130,4 +1131,48 @@
 
 1496301908 c:\projects\dazeui\sources\daze\graphics\shader.h
 	"defines.h"
+
+1496345611 c:\projects\dazeui\sources\daze\ui\window.h
+	<thread>
+	"string.h"
+	"stdlib.h"
+
+1496344849 source:c:\projects\dazeui\sources\daze\ui\windows_window.cpp
+	"window.h"
+	"glad\glad.h"
+	"glfw\glfw3.h"
+	<iostream>
+
+1496329188 c:\projects\dazeui\include\glfw\glfw3.h
+	<stddef.h>
+	<stdint.h>
+	<OpenGL/gl3.h>
+	<OpenGL/gl3ext.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/glcorearb.h>
+	<GLES/gl.h>
+	<GLES/glext.h>
+	<GLES2/gl2.h>
+	<GLES2/gl2ext.h>
+	<GLES3/gl3.h>
+	<GLES2/gl2ext.h>
+	<GLES3/gl31.h>
+	<GLES2/gl2ext.h>
+	<vulkan/vulkan.h>
+	<GL/gl.h>
+	<GL/glext.h>
+	<GL/glu.h>
+
+1496307214 source:c:\projects\dazeui\sources\daze\ui\android_window.cpp
+	"window.h"
+	<jni.h>
+	<errno.h>
+	<stdio.h>
+	<android/input.h>
+	<EGL/egl.h>
+	<GLES/gl.h>
+	<android/sensor.h>
+	<android/log.h>
+	<android_native_app_glue.h>
 
